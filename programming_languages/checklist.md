@@ -5,7 +5,13 @@ Mastering new programming languages in the everchanging tech industry is the nor
 
 This checklist aims to generalise features of some imperative programming language and set them out as learning objective. I do hope that these features when abstracted can help learners like myself to find ease in "translating" from one programming language to another. 
 
-## Level 0: Syntax and basics
+# Table of Contents
+- [Level 0: Syntax & basics](#level-0-syntax--basics)
+- [Level 1: Code Blocks & Scopes](#level-1-code-blocks--scopes)
+- [Level 2: Concurrency & Applications](#level-2-concurrency--applications)
+- [Level 3: Language Specifics](#level-3-language-specifics)
+
+## Level 0: Syntax & basics
 - [ ] Variables declaration, assignment, primative and basic data types
 - [ ] Math
   - Arithmetic (e.g. `+, -, *, /, %`)
@@ -13,7 +19,7 @@ This checklist aims to generalise features of some imperative programming langua
 - [ ] Conditions
   - Logical Operation (e.g.`&&, ||`)
   - Comparison Operation (e.g. `>, <=, ==, ===`) [Note: What equates to false? null? 0?]
-- [ ] Conditional Statements (e.g. `if, else if, else, switch, case, goto`)
+- [ ] Control-flow Statements (e.g. `if, else if, else, switch, case, goto`)
 - [ ] Iterators
   - Basic (e.g. `for, while`)
   - Over list (e.g. `foreach`)
@@ -45,8 +51,10 @@ This checklist aims to generalise features of some imperative programming langua
   - Declaration, support for interfaces & abstract?
   - Access modifier (e.g. public, private)
   - Inheritance & Composition
+- [ ] Exception, Error Handling & Logging
 - [ ] Packages & Modules
   - Import & Export
+  - Package Manager *(Can be level 2)*
 
 ## Level 2: Concurrency & Applications
  - [ ] IO
@@ -58,9 +66,16 @@ This checklist aims to generalise features of some imperative programming langua
    - Run in async/threads for concurrency & synchronization of data (i.e. race condition)
    - Run in parallel
  - [ ] Strings, Parser & Regex
- - [ ] Package Management
+ - [ ] Design Patterns
 
 ## Level 3: Language Specifics
  - [ ] Functional Programming Support
  - [ ] Useful Libraries & Framework
  - [ ] Benchmark comparison with other language
+
+
+# Title
+
+# Inspired By:
+- [How to learn any new programming language (checklist)](http://blog.dbain.com/2007/10/how-to-learn-any-new-programming.html)
+- [Checklist For Learning A New Programming Language](https://medium.com/@larissafeng/checklist-for-learning-a-new-programming-language-4a2e41daeffd)
