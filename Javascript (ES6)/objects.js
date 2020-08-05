@@ -53,6 +53,20 @@ function Person(name, age) {
   }
 }
 
+// Using ES2015 class syntactic sugaring
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  // method
+  nameAge() {
+    return this.name + ' ' + this.age;
+  }
+}
+
+
 // Use of new and this declaration, hence Person cannot be created using a arrow function
 let p1 = new Person('James', 12);
 console.log(p1.nameAge()); // James 12
@@ -68,6 +82,16 @@ console.log(fn());
 
 // Object Creation (bad way)
 //=====================================
+// This is similar to that of this
+function Person2(name, age) {
+  let obj = {};
+  obj.name = name;
+  obj.age = age;
+  obj.nameAge = function() {
+    return obj.name + ' ' + obj.age;
+  }
+}
+
 function makePerson(name, age) {
   return {
     name: name,
@@ -91,6 +115,9 @@ function print(a, b) {
 }
 
 // this access global scope and name is not defined
+// Because 'this' is evaluated at runtime and is not dependent on where the method is declared,
+// but rather on what object is "before the dot operator".
+// For 'this' to be evaluated at point of declaration, use the arrow function.
 console.log(print(1,2)); // undefined 1 2
 
 // Pass 'this' value to function
