@@ -74,4 +74,3 @@ list(nums)  # Convert keys to list
 
 for k, v in nums.items():  # Loop with key and value (instead of just key)
     print(k, v)
-
