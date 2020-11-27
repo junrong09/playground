@@ -100,8 +100,25 @@ Download objects and refs `git fetch`
 Fetch and merge `git pull`
 
 ### 5.  Stash
+List stashes `git stash list`\
+Show diff between stash and commit `git show <stash>`\
+Stash all files in working directory and staging, with message `git stash push -m <message>`\
+Stash specific file `git stash push <file_path>`
+
+Apply* stash `git stash apply <stash>`\
+Remove stash `git stash drop <stash>`\
+Apply and remove stash `git stash pop [<stash>]`
+
+*Clear working directory before applying
 
 ### 6.  Undo / Remove
+#### Remove
+Staged file as "deleted" in index.
+
+Untrack and remove file from working directory `git rm <path>`\
+Untrack file (keep file in working directory) `git rm --cached <path>`
+
+
 #### Revert
 Revert to parent of commit `git revert <commit>`,underlyingly it is merging the parent of the commit to the head
 
@@ -116,7 +133,8 @@ Discard all uncommitted changes `git reset --hard`, (see checkout to remove per 
 Uncommit all previous commits (that has commit_id has parent) into staging `git reset --soft <commit>`\
 Uncommit and unstage all previous commits `git reset [--mixed] <commit>`\
 Remove all previous commits `git reset --hard <commit>`
-* If commit has already been pushed, you cannot reset and remove the record
+
+*If commit has already been pushed, you cannot reset and remove the record
 
 #### Restore (Experimental)
 (TODO)
