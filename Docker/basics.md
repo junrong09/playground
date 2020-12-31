@@ -16,6 +16,7 @@
 * --rm: Remove container upon exit
 * --network: Add virtual network (or use `docker network connect`)
 * --network-alias: Add alias (in addition to one used by the container name)
+* -v/--volume: Mount vol (e.g. named vol `NAME:DEST_PATH`, bind mount [starts with forward slash]`/SOMEPATH:DEST_PATH`)
 * CMD: Start up command to run on the container (e.g. nginx -T / bash)  
 
 ### Exec:
@@ -107,8 +108,28 @@
 ### Build (Also part of Builder):
 `docker build -t <tag> -f <file_name> <path>`
 * Build a image from a dockerfile
-* Without -f, defaults to search in path for file named `Dockerfile`
+* Without -f/--file, defaults to search in path for file named `Dockerfile`
 
+## Volume
+* 2 conventional types: Volume (Managed by docker) and bind mount (in OS filesystem)
+* Volume can be specified in Dockerfile but not bind mount.
+
+### ls
+`docker volume ls`
+
+### Inspect
+`docker volume inspect`
+
+### Create
+`docker volume create <volume_name>`
+
+## Prune
+`docker container/volume/network/image prune` or `docker system prune`
+* To remove dangling/unused container/volume/network/image \
+* -a to remove all
+
+`docker system df`
+* To check disk usage
 
 
 # MacOS Virtual Machine
