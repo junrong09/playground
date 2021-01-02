@@ -130,7 +130,7 @@ Unstage a file (mixed, back to head as its state) `git reset <file_path>`
 
 Discard all uncommitted changes `git reset --hard`, (see checkout to remove per file)
 
-Uncommit all previous commits (that has commit_id has parent) into staging `git reset --soft <commit>`\
+Uncommit all previous commits (with commit_id as parent of commit to uncommit) into staging `git reset --soft <commit>`\
 Uncommit and unstage all previous commits `git reset [--mixed] <commit>`\
 Remove all previous commits `git reset --hard <commit>`
 
