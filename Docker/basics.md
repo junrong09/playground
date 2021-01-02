@@ -87,6 +87,7 @@
 * Image are identifiable via tags in the format of `<org>/<image_name>:version`
 * There are images without `<org`, e.g. official images
 * By default, when version is not given it will use `latest`
+* Source: https://github.com/moby/moby/blob/master/image/spec/v1.md
 
 ### ls:
 `docker image ls`
