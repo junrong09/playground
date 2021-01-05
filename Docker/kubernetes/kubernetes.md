@@ -71,16 +71,21 @@ Type:
 ## Commands
 * General format `kubectl [command] [RESOURCE_TYPE] [RESOURCE_NAME] [flags]`
 * [Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-* [For Docker to kubectl](https://kubernetes.io/docs/reference/kubectl/docker-cli-to-kubectl/)
+* [For Docker to kubectl](https://kubernetes.io/docs/reference/kubectl/docker-cli-to-kubectl/) 
+* Tips: Use `--dry-run -o yaml` to test command.
 
 ### Run
 `kubectl run <name> --image <image>`
 * Create pod as of 1.18+ (similar to `docker run`)
 
 ### Create
-`kubectl create deployment <name> --image <image>`
+`kubectl create <resource> <name> --image <image>` e.g. Common resource: deployment
 * Create resources via CLI or YAML (similar to `docker service create`)
 * Create `Deployment` followed by `ReplicaSet` then `Pod`
+
+### Apply
+`kubectl apply -f <file/directory/url>`
+* Use yaml to start/control/manage cluster (similar to `docker stack deploy`)
 
 ### Get
 `kubectl get pods/deploy/rc/all`
@@ -102,11 +107,6 @@ Type:
 Create ClusterIP `kubectl expose <resource_name> --port <port_number> --name <name>` \
 Create NodePort (external port will be assigned automatically) `kubectl expose <resource_name> --port <cluster_ip_port_number> --name <name> --type NodePort` \
 Create LoadBalancer `kubectl expose <resource_name> --port <cluser_ip_port_number> --name <name> --type LoadBalancer`
-
-### Create Pod (TODO: Delete section)
-`kubectl run` Only for pod creation as of 1.18+ (similar to `docker run`) \
-`kubectl create` Create resources via CLI or YAML (similar to `docker service create`) \
-`kubectl apply` Create/update anything via YAML (similar to `docker stack deploy`) 
 
 # Source
 * [Components](https://kubernetes.io/docs/concepts/overview/components/)
