@@ -72,7 +72,8 @@ View diff in file between working directory and head `git diff head`
 #### Checkout
 Discard unstaged changes `git checkout <filename>`\
 Move head to commit/ref `git checkout <commit/ref>`\
-Checkout into new branch `git checkout -b <branch_name>`
+Checkout into new branch `git checkout -b <branch_name>`\
+*To checkout to a remote branch that does not exist locally, run `git branch -a` and `git checkout <remote_branch_name>`. If the remote branch does not exist locally during listing, run `git fetch`
 
 #### Branch
 List all branches `git branch -a`\
@@ -94,7 +95,8 @@ Add remote `git remote add <name> <url>`
 Update remote refs `git push <remote> <local_ref>/<remote_ref>` or `git push`, if up-stream is set
 
 #### Fetch
-Download objects and refs `git fetch`
+Download objects and refs `git fetch`\
+Use `--prune` to remove remote branches that does not exist in remote repo
 
 #### Pull
 Fetch and merge `git pull`
